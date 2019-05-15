@@ -1,9 +1,9 @@
 {
-  "name": "RPC Shutdown",
-  "version": "1.0",
-  "slug": "rpc_shutdown",
-  "description": "Simple way for remote windows shutdowns",
-  "url": "https://home-assistant.io/addons/rpc_shutdown/",
+  "name": "TNRPC Shutdown",
+  "version": "1.1",
+  "slug": "tnrpc_shutdown",
+  "description": "Seimple way for remote windows shutdowns",
+  "url": "https://home-assistant.io/addons/tnrpc_shutdown/",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "services",
   "boot": "auto",
@@ -13,8 +13,11 @@
     "computers": [
       {
         "alias": "test-pc",
-        "address": "192.168.0.1",
-        "credentials": "user%password"
+        "address": "192.168.178.1",
+        "credentials": "user%password",
+		"reboot": "-R",
+		"message": "Herunterfahren",
+		"time_to_execute": "4"
       }
     ]
   },
@@ -23,7 +26,10 @@
       {
         "alias": "match(^[\\w-]*$)",
         "address": "str",
-        "credentials": "match(^[^%]*(?:%[^%]*)?$)"
+        "credentials": "match(^[^%]*(?:%[^%]*)?$)",
+		"reboot": "str",
+		"message": "str",
+		"time_to_execute": "float(0,9999999999)"
       }
     ]
   },
