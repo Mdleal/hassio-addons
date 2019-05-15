@@ -15,9 +15,9 @@
         "alias": "test-pc",
         "address": "192.168.178.1",
         "credentials": "user%password",
-		"reboot": "-R",
-		"message": "Herunterfahren",
-		"time_to_execute": "4"
+	"reboot": "-R",
+	"message": "Herunterfahren",
+	"time_to_execute": "4"
       }
     ]
   },
@@ -27,9 +27,9 @@
         "alias": "match(^[\\w-]*$)",
         "address": "str",
         "credentials": "match(^[^%]*(?:%[^%]*)?$)",
-		"reboot": "str",
-		"message": "str",
-		"time_to_execute": "float(0,9999999999)"
+	"reboot": "str",
+	"message": "str",
+	"time_to_execute": "float(0,9999999999)"
       }
     ]
   },
